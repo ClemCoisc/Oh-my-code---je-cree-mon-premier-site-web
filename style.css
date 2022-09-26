@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'lunaregular';
+    src: url('./fonts/luna-webfont.woff2') format('woff2'),
+         url('./fonts/luna-webfont.woff') format('woff'),
+         url('./fonts/luna.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+    font-family: 'arial';
+    font-size: 16px;
+}
+
+h1{
+    color : black;
+    font-size: 24px;
+    font-family: 'lunaregular';
+}
+
+h2{
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+
+h3{
+    color: black;
+}
+
+a{
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    transition: 1s;
+}
+
+a:hover{
+    color: red;
+}
+
+#hero{
+    background: url('./images/fond.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 1%;
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px;
+}
+
+#bandeau{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#contenu{
+    text-align: center;
+    padding: 10%;
+}
+
+#contenu a{
+    color: red;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 20px;
+    transition: ease 1s;
+}
+
+#contenu a:hover{
+    color: white;
+    background-color: rgba(178, 32, 19, 0.8);
+}
+
+#contenu img:hover{
+    transform: rotate(300deg) scale(1.2);
+    
+}
+
+#contenu img{
+    transition: 0.2s;
+    
+}
+
+#apropos {
+    display: flex;
+}
+
+#apropos_image{
+    flex: 1;
+    padding-top: 20px;
+}
+
+#apropos_image img{
+    flex: 1;
+    max-width: 100%;
+}
+
+#apropos_text{
+    flex:2;
+    padding: 20px;
+    text-align: justify;
+}
+
+#services{
+    display:flex;
+    background-color: #666;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.services_item p{
+    text-align: justify;
+    padding: 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer a{
+    color: black;
+}
+
+footer a:hover{
+    color: #e74c3c;
+}
+
+.social{
+    padding: 20px
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(243, 235, 72, 0.76);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: auto;
+}
+
+.modalBloc{
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-top: 10px solid black;
+}
+
+.modalBtn{
+    margin:5%;
+}
+
+.modalBtn a{
+    color: white;
+    background-color: black;
+}
+
+.modalBtn a:hover{
+    opacity: 0.7;
+}
+
+.modalTexteTitle{
+    font-size: 60px;
+    font-family: 'lobster', cursive;
+}
+
+.modalTextSubtitle{
+    font-size: 20px;
+}
+
+.modalText img{
+    width: 60%;
+}
+
+
+@media screen and (max-width: 390px) {
+    #apropos{
+        flex-direction: column;
+    }
+    #services{
+        flex-direction: column;
+    } 
+    nav a{
+        display: block;
+        padding: 10px;
+    }    
+
+    .modalTexteTitle{
+        font-size: 40px;
+    }
+
+    .modalBtn a{
+        display: block;
+        margin-bottom: 5%;
+    }
+}
